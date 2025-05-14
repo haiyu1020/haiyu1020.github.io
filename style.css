@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'AaKeAiBeiTianTianQuanZhuLiao-2';
+    src: url('fonts/AaKeAiBeiTianTianQuanZhuLiao-2.ttf') format('truetype');
+}
+
+h1 {
+    color: pink;
+    font-family: 'AaKeAiBeiTianTianQuanZhuLiao-2', cursive;
+}
