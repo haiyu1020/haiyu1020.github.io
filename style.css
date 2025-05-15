@@ -60,3 +60,15 @@ svg {
     margin-bottom: 8px;
     display: none;
 }
+
+#popupText {
+    font-weight: bold;
+}
+#popupNames ul {
+    list-style-type: disc;
+    margin: 8px 0 0 20px;
+    padding: 0;
+}
+#popupNames li {
+    margin-bottom: 4px;
+}
