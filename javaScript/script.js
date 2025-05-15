@@ -13,25 +13,46 @@ popupText.parentElement.appendChild(popupNames);
 // 存储 JSON 数据
 let mapData = {};
 
-// 加载 JSON 数据
+// 加载 JSON 数据并设置默认颜色
 async function loadMapData() {
     try {
-        // 修改为相对路径
         const response = await fetch('./data/data.json');
         if (!response.ok) throw new Error('无法加载数据文件');
         mapData = await response.json();
-        console.log('数据加载成功:', mapData); // 添加这行来调试
+        console.log('数据加载成功:', mapData);
+
+        // 设置默认颜色
+        const paths = dom.querySelectorAll('path');
+        paths.forEach(path => {
+            const id = path.id;
+            if (['海洋', '国界', '省界'].includes(id)) {
+                path.style.fill = '#eee'; // 特殊区域默认颜色
+                return;
+            }
+            const data = mapData[id] || { names: ['无数据'] };
+            const hasValidNames = data.names && data.names.length > 0 && !(data.names.length === 1 && data.names[0] === '无数据');
+            const defaultFill = hasValidNames ? '#ff69b4' : '#eee';
+            path.style.fill = defaultFill;
+            path.dataset.defaultFill = defaultFill; // 存储默认颜色
+        });
     } catch (error) {
         console.error('加载数据失败:', error);
-        mapData = {}; // 提供空对象作为 fallback
+        mapData = {};
+        // 如果数据加载失败，所有 path 使用默认颜色
+        dom.querySelectorAll('path').forEach(path => {
+            path.style.fill = '#eee';
+            path.dataset.defaultFill = '#eee';
+        });
     }
 }
+
 // 初始化时加载数据
 loadMapData().then(() => {
     dom.addEventListener('mouseover', (e) => {
         if (['海洋', '国界', '省界'].includes(e.target.id)) {
             return;
         }
+        
         e.target.style.fill = '#3b7efc';
 
         // 设置弹窗内容：文本和图片
@@ -50,7 +71,7 @@ loadMapData().then(() => {
         });
         popupNames.appendChild(nameList);
 
-        if (data.image) {
+        if (data.image && /\.(jpg|png|gif)$/i.test(data.image)) {
             popupImage.src = data.image;
             popupImage.style.display = 'block';
         } else {
@@ -66,11 +87,11 @@ loadMapData().then(() => {
         popup.style.top = `${Math.min(e.clientY + offsetY, maxY)}px`;
         popup.style.display = 'block';
     });
-});
-dom.addEventListener('mouseout', (e) => {
+    dom.addEventListener('mouseout', (e) => {
     if (['海洋', '国界', '省界'].includes(e.target.id)) {
         return;
     }
-    e.target.style.fill = '#eee';
+    e.target.style.fill = e.target.dataset.defaultFill || '#eee';
     popup.style.display = 'none';
+});
 });
