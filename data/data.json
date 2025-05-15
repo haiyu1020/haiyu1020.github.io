@@ -1,0 +1,172 @@
+{
+  "北京市": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "天津市": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "河北省": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "山西省": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "内蒙古自治区": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "辽宁省": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "吉林省": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "黑龙江省": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "上海市": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "江苏省": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "浙江省": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "安徽省": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "福建省": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "江西省": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "山东省": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "河南省": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "湖北省": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "湖南省": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "广东省": {
+    "names": ["稻香酒家", "肥韬", "壹号粥"],
+    "image": "image/foods/广东/肥韬解腻水.jpg",
+    "description": ""
+  },
+  "广西壮族自治区": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "海南省": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "重庆市": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "四川省": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "贵州省": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "云南省": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "西藏自治区": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "陕西省": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "甘肃省": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "青海省": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "宁夏回族自治区": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "新疆维吾尔自治区": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "台湾省": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "香港特别行政区": {
+    "names": [],
+    "image": null,
+    "description": ""
+  },
+  "澳门特别行政区": {
+    "names": [],
+    "image": null,
+    "description": ""
+  }
+}
