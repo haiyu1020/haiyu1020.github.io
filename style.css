@@ -18,6 +18,7 @@ path {
     overflow: hidden;
 }
 
+/* 地图 */
 svg {
     transform: scale(1.5);
     width: 100%;
@@ -28,4 +29,34 @@ svg {
     position: fixed;
     top: 20px;
     left: 20px;
+}
+
+/* 弹窗 */
+#popup {
+    display: none;
+    position: fixed;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: 'Microsoft YaHei', Arial, sans-serif;
+    pointer-events: none;
+    max-width: 100px;
+    transition: left 0.1s ease, top 0.1s ease;
+}
+
+#popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#popup-image {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 8px;
+    display: none;
 }
